@@ -1,0 +1,75 @@
+<div class="carousel-container">
+    <div class="carousel">
+      <div class="carousel-item">Item 1</div>
+      <div class="carousel-item">Item 2</div>
+      <div class="carousel-item">Item 3</div>
+    </div>
+    <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+    <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+  </div>
+  
+
+  CSS
+
+  .carousel-container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-item {
+    min-width: 100%;
+    text-align: center;
+    background: #ddd;
+    padding: 20px 0;
+    font-size: 20px;
+  }
+  
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .carousel-control.prev {
+    left: 10px;
+  }
+  
+  .carousel-control.next {
+    right: 10px;
+  }
+ 
+  JavaScript
+
+let currentIndex = 0;
+
+function showSlide(index) {
+  const carousel = document.querySelector('.carousel');
+  const totalSlides = document.querySelectorAll('.carousel-item').length;
+  if (index >= totalSlides) currentIndex = 0;
+  else if (index < 0) currentIndex = totalSlides - 1;
+  else currentIndex = index;
+  carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+function nextSlide() {
+  showSlide(currentIndex + 1);
+}
+
+function prevSlide() {
+  showSlide(currentIndex - 1);
+}
+
+// Initialize
+showSlide(currentIndex);

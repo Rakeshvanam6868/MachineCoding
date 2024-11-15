@@ -1,0 +1,12 @@
+npx create-react-app react-chat
+cd react-chat
+npm install socket.io-client
+npm start
+mkdir backend
+cd backend
+npm init -y
+npm install express socket.io
+node server.js
+npm install socket.io-client
+node server.js
+npm start

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poll Widget</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="poll-widget" class="poll-widget">
+    <h2>What's your favorite programming language?</h2>
+    <div class="options">
+      <button onclick="vote('JavaScript')">JavaScript</button>
+      <button onclick="vote('Python')">Python</button>
+      <button onclick="vote('Java')">Java</button>
+      <button onclick="vote('C++')">C++</button>
+    </div>
+    <div id="results" class="results"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

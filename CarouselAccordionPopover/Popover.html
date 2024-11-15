@@ -1,0 +1,48 @@
+<div class="popover-container">
+    <button class="popover-button" onclick="togglePopover()">Click me</button>
+    <div class="popover-content">This is the popover content.</div>
+  </div>
+  
+
+  .popover-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .popover-button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .popover-content {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+    display: none;
+  }
+  
+
+
+  function togglePopover() {
+    const popover = document.querySelector('.popover-content');
+    popover.style.display = popover.style.display === 'block' ? 'none' : 'block';
+  }
+  
+  // Optional: Close on click outside
+  document.addEventListener('click', (event) => {
+    const button = document.querySelector('.popover-button');
+    const popover = document.querySelector('.popover-content');
+    if (!button.contains(event.target)) {
+      popover.style.display = 'none';
+    }
+  });
+  

@@ -1,0 +1,43 @@
+.todo-container {
+    width: 300px;
+    margin: 50px auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .add-task,
+  .edit-task {
+    margin: 10px 0;
+  }
+  
+  .add-task input,
+  .edit-task input {
+    padding: 8px;
+    width: 70%;
+    margin-right: 5px;
+  }
+  
+  button {
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .task-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    margin: 5px 0;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+  }
+  
+  .task-item button {
+    margin-left: 5px;
+  }
+  

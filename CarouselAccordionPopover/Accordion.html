@@ -1,0 +1,50 @@
+<div class="accordion-container">
+    <div class="accordion-item">
+      <button class="accordion-title" onclick="toggleAccordion(this)">Section 1</button>
+      <div class="accordion-content">
+        <p>Content for Section 1.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-title" onclick="toggleAccordion(this)">Section 2</button>
+      <div class="accordion-content">
+        <p>Content for Section 2.</p>
+      </div>
+    </div>
+  </div>
+  
+
+  .accordion-container {
+    width: 80%;
+    margin: auto;
+  }
+  
+  .accordion-title {
+    width: 100%;
+    background-color: #eee;
+    padding: 15px;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    background: #f9f9f9;
+    transition: max-height 0.3s ease;
+    padding: 0 15px;
+  }
+
+  
+  function toggleAccordion(button) {
+    const content = button.nextElementSibling;
+    const isActive = content.style.maxHeight;
+  
+    document.querySelectorAll('.accordion-content').forEach((item) => {
+      item.style.maxHeight = null;
+    });
+  
+    if (!isActive) content.style.maxHeight = `${content.scrollHeight}px`;
+  }
+  
