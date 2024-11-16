@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Ordering App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <h1>Food Ordering App</h1>
+
+    <div class="controls">
+      <input type="text" id="searchInput" placeholder="Search food...">
+      <select id="sortSelect">
+        <option value="">Sort by Price</option>
+        <option value="asc">Low to High</option>
+        <option value="desc">High to Low</option>
+      </select>
+      <select id="filterSelect">
+        <option value="">Filter by Category</option>
+        <option value="Fast Food">Fast Food</option>
+        <option value="Healthy">Healthy</option>
+        <option value="Seafood">Seafood</option>
+        <option value="Italian">Italian</option>
+      </select>
+    </div>
+
+    <div class="food-list" id="foodList"></div>
+
+    <div class="cart">
+      <h2>Cart</h2>
+      <ul id="cartList"></ul>
+      <h3>Total: $<span id="totalPrice">0</span></h3>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
